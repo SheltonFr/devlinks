@@ -50,6 +50,7 @@ body * {
 
 #container {
   width: 100%;
+  min-width: 320px;
   max-width: 588px;
   margin: 56px auto 0; /* top sides bottom*/
   padding: 0 24px;
@@ -179,4 +180,14 @@ body * {
 .copy span:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+@media (min-width: 700px) {
+  :root{
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
