@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --copy-color: #ffffffbd;
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --toggler-bg-url: url(./assets/moon-stars.svg);
+  --right: unset;
+  --left: 0;
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --copy-color: black;
+  --toggler-bg-url: url(./assets/sun.svg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --right: 0;
+  --left: unset;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  min-width: 360px;
+  max-width: 588px;
+  margin: 56px auto 0; /* top sides bottom*/
+  padding: 0 24px;
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+  transition: opacity 0.2s;
+}
+
+#profile p:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#switch {
+  position: relative;
+  width: min-content;
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background-image: var(--toggler-bg-url);
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  z-index: 1;
+
+  left: var(--left);
+  right: var(--right);
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#switch button:hover {
+  box-shadow: 0 0 2px 5px var(--highlight-color);
+}
+
+#switch span {
+  width: 64px;
+  height: 24px;
+  display: block;
+  background-color: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 64px;
+  background: var(--surface-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+#buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+  gap: 16px;
+}
+
+#buttons li a {
+  border: 1px solid var(--stroke-color);
+  display: block;
+  text-align: center;
+  padding: 16px 24px;
+  border-radius: 8px;
+  background: var(--surface-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  font-weight: 500;
+
+  transition: all 0.2s;
+}
+
+#buttons li a:hover {
+  border-color: var(--text-color);
+  background: var(--surface-color-hover);
+}
+
+#social {
+  padding: 24px 0;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+#social ion-icon {
+  font-size: 24px;
+  padding: 16px;
+  border-radius: 100%;
+  transition: background-color 0.2s ease-in;
+}
+
+#social ion-icon:hover {
+  background-color: var(--highlight-color);
+}
+
+.copy {
+  padding: 24px 0;
+}
+
+.copy p,
+.my-name {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--copy-color);
+
+  transition: color 0.2s;
+}
+
+.copy span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
