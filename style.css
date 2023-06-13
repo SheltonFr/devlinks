@@ -49,7 +49,7 @@ body * {
 }
 
 #container {
-  min-width: 360px;
+  width: 100%;
   max-width: 588px;
   margin: 56px auto 0; /* top sides bottom*/
   padding: 0 24px;
