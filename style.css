@@ -108,7 +108,7 @@ body * {
   animation: slide-in .4s forwards;
 }
 
-#switch button:hover {
+#switch button:hover, #switch button:active {
   box-shadow: 0 0 2px 5px var(--highlight-color);
 }
 
